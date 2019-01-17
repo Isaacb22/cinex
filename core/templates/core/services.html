@@ -1,0 +1,133 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Servicios{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+      <div class="text-center">
+        <h1 class="my-4">
+          Peliculas
+        </h1>
+      </div>
+
+      <!-- Peliculas -->
+      <div class="card mb-4">
+        <img class="card-img-top" style="height: 30rem; width: 100%;" src="{% static 'core/img/whiplash.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h2 class="text-center">Whiplash - Musica y obsesion</h2>
+          <p class="card-text">Un estudiante de música de primer año se gana un asiento detrás de los tambores en una banda de jazz encabezada por su maestro quien usa el miedo y la intimidación para presionar a sus estudiantes a ser perfectos</p>
+          <a href="#" class="btn btn-primary">Ver funciones disponibles &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Publicado el 2 de Enero por CINEX
+          <a href="#">Drama</a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <img class="card-img-top" style="height: 30rem; width: 100%;" src="{% static 'core/img/fallout.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h2 class="card-title">Misión imposible - Repercusión</h2>
+          <p class="card-text">Un traficante de armas y un grupo de terroristas pretenden realizar un triple ataque nuclear con tres artefactos de plutonio, los cuales se pierden. Ethan Hunt y su equipo tendrán que recuperarlos antes de que caigan en las manos equivocadas</p>
+          <a href="#" class="btn btn-primary">Ver funciones disponibles &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Publicado el 5 de Enero por en
+          <a href="#">Accion</a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <img class="card-img-top" 
+        style="height: 30rem; width: 100%;" src="{% static 'core/img/rampage.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h2 class="card-title">Rampage - Devastación</h2>
+          <p class="card-text">Un gorila, un lobo y una serpiente sufren una mutación genética y se convierten en seres gigantescos y violentos. El primatólogo que cuidaba del gorila y una experta en genética tratan de detenerlos y, al mismo tiempo, evitar que sufran daños.</p>
+          <a href="#" class="btn btn-primary">Ver funciones disponibles &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Publicado el 7 de Enero en
+          <a href="#">Ciencia ficcion</a>
+        </div>
+      </div>
+
+      <!-- Paginacion -->
+      <ul class="pagination justify-content-center mb-4">
+        <li class="page-item">
+          <a class="page-link" href="#">&larr; Mas reciente</a>
+        </li>
+        <li class="page-item disabled">
+          <a class="page-link" href="#">Mas viejo &rarr;</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+      <!-- Search Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Buscar por categoria</h5>
+        <div class="card-body">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar por...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Ir!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Categorias</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#">Ciencia ficcion</a>
+                </li>
+                <li>
+                  <a href="#">Accion</a>
+                </li>
+                <li>
+                  <a href="#">Drama</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#">Comedia</a>
+                </li>
+                <li>
+                  <a href="#">Horror</a>
+                </li>
+                <li>
+                  <a href="#">Misterio</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Widget 
+      <div class="card my-4">
+        <h5 class="card-header">Side Widget</h5>
+        <div class="card-body">
+          You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+{% endblock %}

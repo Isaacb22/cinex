@@ -12,7 +12,10 @@
 
     {% load static %}
     <!-- Bootstrap core CSS -->
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.mi.css' %}" rel="stylesheet">
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/bootstrap/css/blog-home.css' %}" rel="stylesheet">
+    
 
     <!-- Custom styles for this template -->
     <style type="text/css"> 
@@ -28,6 +31,8 @@
     </style>
   </head>
 
+  <!--Contenido de la pagina-->
+
   <body>
 
     <!-- Navigation -->
@@ -39,65 +44,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item {% if request.path == '/' %}active{% endif %}">
               <a class="nav-link" href="{% url 'home' %}">Inicio
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
               <a class="nav-link" href="#">Acerca de</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+            <li class="nav-item {% if request.path == '/services/' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'services' %}">Servicios</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
               <a class="nav-link" href="#">Contacto</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('{% static 'core/img/avengers.jpg' %}')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Los Vengadores</h3>
-              <p>Pelicula de Ciencia ficcion</p>
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('{% static 'core/img/bombo.jpg' %}')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Bum ble ble</h3>
-              <p>Pelicula de Accion-Ciencia ficcion</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('{% static 'core/img/venom.jpg' %}')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Venom</h3>
-              <p>Pelicula de Suspenso</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </header>
 
     <!-- Page Content -->
     {% block content %}{% endblock %}
@@ -113,6 +77,11 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.mi.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.mi.js"></script> 
 
   </body>
 
