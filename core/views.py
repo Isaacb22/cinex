@@ -7,3 +7,6 @@ def home(request):
 
 def services(request):
 	return render(request, "core/services.html")
+
+def notices(request):
+	return render(request, "core/notices.html")

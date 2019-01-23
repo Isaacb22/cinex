@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Servicios{% endblock %}
+{% block content %}
+<main role="main">
+  <div class="container mb-4">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto">
+        <div class="card text-center">
+          <h2 class="mb-4;">{{ service.title }}</h2>
+          <div>
+            <img class="card-img-top" src="{{service.image.url}}" 
+            style="width:60%; height:40%; margin-bottom: 4%" alt="Card image cap">
+            <p>{{service.content|striptags|safe|truncatechars:"200"}}</p>
+            <div class="card-footer text-muted">
+              <p><a class="btn btn-primary" href="{% url 'service' service.id service.title|slugify %}">Editar</a>
+              <a class="btn btn-danger" href="{% url 'service' service.id service.title|slugify %}">Eliminar</a></p>
+            </div>
+              <!--
+              {% if request.user.is_staff %}
+                | <a href="#">Editar</a>
+                | <a href="#">Borrar</a>
+              {% endif %}
+              -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
