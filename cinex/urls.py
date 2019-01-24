@@ -21,7 +21,7 @@ from django.conf import settings
 urlpatterns = [
     path('', views.home, name="home" ),
     path('services/', include('services.urls')),
-    path('notices/', views.notices, name="notices" ),
+    path('notices/', include('notices.urls')),
     path('admin/', admin.site.urls),
 ]
 

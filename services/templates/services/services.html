@@ -16,16 +16,18 @@
         <div class="row project justify-content-around mb-4">
         {% for service in services %}
         <!-- Peliculas -->
-          <div class="card text-center" style="width: 14rem;height: 23rem; margin-bottom: 4%" >
-            <img class="card-img-top" src="{{service.image.url}}" style="width:100%; height:40%" alt="Card image cap">
+          <div class="card text-center" style="width: 14rem;height: 26rem; margin-bottom: 4%" >
+            <img class="card-img-top" src="{{service.image.url}}" 
+            style="width:96%; height:40%;margin-right:2%; margin-left:2%; margin-top:2%; border-radius:2%" alt="Card image cap">
             <div class="card-body">
               <h3><strong class="card-title">{{service.title}}</strong></h3>
               <div class="card-text">{{service.content|safe}}</div> 
               <a href="{% url 'service' service.id service.title|slugify %}" class="btn btn-primary">Ver funciones &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Publicado el 2 de Enero por CINEX
-              <a href="#">Drama</a>
+              
+              <div class="card-footer text-muted">
+                Publicado el 2 de Enero por CINEX
+                <a href="#">Drama</a>
+              </div>
             </div>
           </div>
         {% endfor %}

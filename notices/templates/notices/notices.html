@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Noticias{% endblock %}
+
+<!-- Contenido de la pagina -->
+{% block content %}
+<main role="main">
+  <div class="container mb-6">
+  	<h1 class="my-4; text-center" style="margin-bottom: 2%; margin-top: 2%">
+  		Noticias
+  	</h1>
+  	<div class="row project justify-content-around mb-4">
+	    {% for notice in notices %}
+	      <div class="card" style="width: 20rem;height: 24rem; margin-bottom: 4%">
+	        <img class="card-text-center" src="{{notice.image.url}}" 
+	        style="width:96%; height:50%; margin-left:2%; margin-top:2%; margin-right:2%; border-radius: 1%" 
+	        alt="Card image cap">
+	        <h5 class="card-header"><cite><strong>{{notice.title|truncatechars:"50"}}</strong></cite></h5>
+	         <div class="card-body">
+	          <div>
+	            <p class="text-muted">{{notice.content|striptags|safe|truncatechars:"40"}}</p>
+	            <div class="text-center">
+	            	<p><a class="btn btn-info active" href="{% url 'notice' notice.id notice.title|slugify %}">Leer más</a>
+	            </div>
+	            </p>
+	          </div>
+	        </div>
+	      </div>
+	    {% endfor %}
+	   </div>
+	  </div>
+  </div>
+</main>
+{% endblock %}
+
+
