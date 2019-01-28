@@ -13,8 +13,35 @@
     {% load static %}
     <!-- Bootstrap core CSS -->
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.mi.css' %}" rel="stylesheet">
+    <!--===============================================================================================-->
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--===============================================================================================-->
     <link href="{% static 'core/vendor/bootstrap/css/blog-home.css' %}" rel="stylesheet">
+
+    <!-- Css de contact -->
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'core/img/icons/home.ico' %}"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/vendor/bootstrap/css/bootstrap.contact.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/fonts/font-awesome-4.7.0/css/font-awesome.contact.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/fonts/Linearicons-Free-v1.0.0/icon-font.contact.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/vendor/animsition/css/animsition.mein.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/vendor/select2/select2.mein.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/vendor/daterangepicker/daterangepicker.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/utils.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/main-contact.css' %}">
+    <!--===============================================================================================-->
     
 
     <!-- Custom styles for this template -->
@@ -38,14 +65,14 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">CINEX</a>
+        <a class="navbar-brand" href="{% url 'home' %}">CINEX</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-              <a class="fa fa-home nav-link" href="{% url 'home' %}">Inicio
+              <a class="fa fa-home nav-link" href="{% url 'home' %}"> Inicio
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -56,7 +83,7 @@
               <a class="nav-link" href="{% url 'services' %}">Servicios</a>
             </li>
             <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
             </li>
           </ul>
         </div>
@@ -76,12 +103,51 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <!--===============================================================================================-->
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/jquery/jquery.mi.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.mi.js' %}"></script>
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/jquery/jquery.mi.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.mi.js"></script> 
+    
+    <!-- Scripts de contact-->
+    
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/jquery/jquery-3.2.1.min-contact.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/animsition/js/animsition.min-contact.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/select2/select2.min-contact.js' %}"></script>
+    <script>
+      $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect1')
+      });
+    </script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/daterangepicker/moment.min-contact.js' %}"></script>
+    <script src="{% static 'core/vendor/daterangepicker/daterangepicker.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/vendor/countdowntime/countdowntime.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'core/js/main-contact.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23581568-13');
+    </script> 
 
   </body>
 

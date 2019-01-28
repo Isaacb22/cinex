@@ -20,6 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name="home" ),
+    path('contact/', views.contact, name="contact" ),
     path('services/', include('services.urls')),
     path('notices/', include('notices.urls')),
     path('admin/', admin.site.urls),
