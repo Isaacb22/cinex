@@ -5,39 +5,35 @@
 <!-- Page Content -->
 
 <div class="container">
-    <div class="row">
-      <!-- Blog Entries Column -->
-      <div class="col-md-8">
-        <div class="text-center">
-          <h1 class="my-4">
-            Peliculas
-          </h1>
-        </div>
-        <div class="row project justify-content-around mb-4">
-        {% for post in posts %}
-        <!-- Peliculas -->
-          <div class="card text-center" style="width: 14rem;height: 28rem; margin-bottom: 4%" >
-            <img class="card-img-top" src="{{post.image.url}}" 
-            style="width:96%; height:40%;margin-right:2%; margin-left:2%; margin-top:2%; border-radius:2%" alt="Card image cap">
-            <div class="card-body">
-              <h3><strong class="card-title">{{post.title}}</strong></h3>
-              <div class="card-text">{{post.content}}</div> 
-              <a href="" class="btn btn-primary">Ver funciones &rarr;</a>
-              
-              <div class="card-footer text-muted">
-                Publicado el {{post.published|date:"SHORT_DATE_FORMAT"}} por {{post.author}}<br>
-                {% for category in post.categories.all %}
-                <a href="#">{{category.name}}</a>
-                {% endfor %}
-              </div>
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+      <div class="text-center">
+        <h1 class="my-4">
+          Peliculas
+        </h1>
+      </div>
+      <div class="row project justify-content-around mb-4">
+      {% for post in posts %}
+      <!-- Peliculas -->
+        <div class="card text-center" style="width: 14rem;height: 28rem; margin-bottom: 4%" >
+          <img class="card-img-top" src="{{post.image.url}}" 
+          style="width:96%; height:40%;margin-right:2%; margin-left:2%; margin-top:2%; border-radius:2%" alt="Card image cap">
+          <div class="card-body">
+            <h3><strong class="card-title">{{post.title}}</strong></h3>
+            <div class="card-text">{{post.content}}</div> 
+            <a href="" class="btn btn-primary">Ver funciones &rarr;</a>
+            
+            <div class="card-footer text-muted">
+              Publicado el {{post.published|date:"SHORT_DATE_FORMAT"}} por {{post.author}}<br>
+              {% for category in post.categories.all %}
+              <a href="#">{{category.name}}</a>
+              {% endfor %}
             </div>
           </div>
-        {% endfor %}
         </div>
-
-
-      
-
+      {% endfor %}
+      </div>
     </div>
 
     <!-- Sidebar Widgets Column -->
@@ -45,14 +41,16 @@
 
       <!-- Search Widget -->
       <div class="card my-4">
-        <h5 class="card-header">Buscar por categoria</h5>
+        <h5 class="card-header">Buscar por nombre</h5>
         <div class="card-body">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar por...">
+          <form method="GET" action="">
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar por..." name="Search">
             <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button">Ir!</button>
+              <button class="btn btn-secondary" type="submit">Ir!</button>
             </span>
           </div>
+          </form> 
         </div>
       </div>
 
