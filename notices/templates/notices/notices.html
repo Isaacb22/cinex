@@ -11,7 +11,7 @@
   	</h1>
   	<div class="row project justify-content-around mb-4">
 	    {% for notice in notices %}
-	      <div class="card" style="width: 20rem;height: 24rem; margin-bottom: 4%">
+	      <div class="card" style="width: 20rem;height: 26rem; margin-bottom: 4%">
 	        <img class="card-text-center" src="{{notice.image.url}}" 
 	        style="width:96%; height:50%; margin-left:2%; margin-top:2%; margin-right:2%; border-radius: 1%" 
 	        alt="Card image cap">
@@ -19,14 +19,13 @@
 	         <div class="card-body">
 	          <div>
 	            <p class="text-muted">{{notice.content|striptags|safe|truncatechars:"40"}}</p>
-	            <div class="text-center">
-	            	<p><a class="btn btn-info active" href="{% url 'notice' notice.id notice.title|slugify %}">Leer más</a>
+	            <div class="container-contact100-form-btn">
+	            	<p><a class="contact100-form-btn" href="{% url 'notice' notice.id notice.title|slugify %}">Leer más</a></p>
 	            </div>
-	            </p>
 	          </div>
 	        </div>
 	      </div>
-	    {% endfor %}
+	    {% endfor %} 
 	   </div>
 	  </div>
   </div>
