@@ -14,19 +14,21 @@
           </h1>
         </div>
         <div class="row project justify-content-around mb-4">
-        {% for service in services %}
+        {% for post in posts %}
         <!-- Peliculas -->
-          <div class="card text-center" style="width: 14rem;height: 26rem; margin-bottom: 4%" >
-            <img class="card-img-top" src="{{service.image.url}}" 
+          <div class="card text-center" style="width: 14rem;height: 28rem; margin-bottom: 4%" >
+            <img class="card-img-top" src="{{post.image.url}}" 
             style="width:96%; height:40%;margin-right:2%; margin-left:2%; margin-top:2%; border-radius:2%" alt="Card image cap">
             <div class="card-body">
-              <h3><strong class="card-title">{{service.title}}</strong></h3>
-              <div class="card-text">{{service.content|safe}}</div> 
-              <a href="{% url 'service' service.id service.title|slugify %}" class="btn btn-primary">Ver funciones &rarr;</a>
+              <h3><strong class="card-title">{{post.title}}</strong></h3>
+              <div class="card-text">{{post.content}}</div> 
+              <a href="" class="btn btn-primary">Ver funciones &rarr;</a>
               
               <div class="card-footer text-muted">
-                Publicado el 2 de Enero por CINEX
-                <a href="#">Drama</a>
+                Publicado el {{post.published|date:"SHORT_DATE_FORMAT"}} por {{post.author}}<br>
+                {% for category in post.categories.all %}
+                <a href="#">{{category.name}}</a>
+                {% endfor %}
               </div>
             </div>
           </div>
