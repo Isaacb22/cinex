@@ -1,0 +1,81 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+	.main-head{
+	    height: 150px;
+	    background: #FFF;
+	   
+}
+
+	.sidenave {
+	    height: 100%;
+	    background-color: #000;
+	    overflow-x: hidden;
+	    padding-top: 20px;
+}
+
+
+	.mein {
+	    padding: 0px 10px;
+}
+
+	@media screen and (max-height: 450px) {
+	    .sidenav {padding-top: 15px;}
+}
+
+	@media screen and (max-width: 450px) {
+	    .login-forma{
+	        margin-top: 10%;
+	    }
+
+	    .register-form{
+	        margin-top: 10%;
+	    }
+	}
+
+	@media screen and (min-width: 768px){
+	    .main{
+	        margin-left: 40%; 
+	    }
+
+	    .sidenave{
+	        width: 40%;
+	        position: fixed;
+	        z-index: 1;
+	        top: 0;
+	        left: 0;
+	    }
+
+	    .login-forma{
+	        margin-top: 80%;
+	    }
+
+	    .register-form{
+	        margin-top: 20%;
+	    }
+	}
+
+
+	.login-main-text{
+	    margin-top: 20%;
+	    padding: 60px;
+	    color: #fff;
+	}
+
+	.login-main-texo h2{
+	    font-weight: 300;
+	}
+
+	.btn-blacke{
+	    background-color: #000 !important;
+	    color: #fff;
+	}

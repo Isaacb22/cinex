@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Inicio de sesion{% endblock %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form action="" method="post" class="login100-form validate-form">
+					<span class="login100-form-title p-b-34">
+						Inicio de sesion
+					</span>
+					
+					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
+						<input id="first-name" class="input100" type="text" name="username" placeholder="Nombre de usuario">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+						<input class="input100" type="password" name="pass" placeholder="Contraseña">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Acceder
+						</button>
+					</div>
+
+					<div class="w-full text-center p-t-27 p-b-239">
+						<span class="txt1">
+							Cambiar
+						</span>
+
+						<a href="#" class="txt2">
+							Nombre de usuario / Contraseña
+						</a>
+					</div>
+
+					<div class="w-full text-center">
+						<a href="#" class="txt3">
+							Registrarse
+						</a>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url('{% static '/core/img/cine2.jpg' %}');"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
