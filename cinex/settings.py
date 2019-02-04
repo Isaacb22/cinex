@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +42,6 @@ INSTALLED_APPS = [
     'core',
     'services',
     'notices',
-    'registration',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +130,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #Auth redirects
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
