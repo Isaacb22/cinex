@@ -106,9 +106,14 @@
             <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
               <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
             </li>
+            {% if not request.user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" aria-hidden="true" href="{% url 'login' %}">Acceder</a>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" aria-hidden="true" href="{% url 'logout' %}">Salir</a>
             </li>
+            {% endif %}
           </ul>
         </div>
       </div>

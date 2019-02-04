@@ -2,7 +2,7 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 class Notice(models.Model):
-    title = models.CharField(verbose_name="Título", max_length=10)
+    title = models.CharField(verbose_name="Título", max_length=200)
     content = RichTextField(verbose_name="Contenido")
     image = models.ImageField(verbose_name="Imagen", upload_to="services")
     order = models.SmallIntegerField(verbose_name="Orden", default=0)
