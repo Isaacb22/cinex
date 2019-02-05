@@ -9,4 +9,4 @@ def notices(request):
 
 def notice(request, notice_id, notice_slug):
     notice = get_object_or_404(Notice, id=notice_id)
-    return render(request, 'notices/notice.html', {'notice':notice})
+    return render(request, 'notice.html', {'notice':notice})
