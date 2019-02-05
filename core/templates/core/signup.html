@@ -10,6 +10,18 @@
 						Registro
 					</span>
 					
+					{% if messages %}
+					<ul class="messages">
+				    {% for message in messages %}
+					    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+						    <div class="alert alert-danger" role="alert">
+		  						{{ message }}
+								</div>
+							</li>
+				    {% endfor %}
+					</ul>
+					{% endif %}
+
 					<!-- Input Username -->
 					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
 						<input type="text" name="username" requiredid="id_username" ="name" class="input100" placeholder="Nombre de usuario">
