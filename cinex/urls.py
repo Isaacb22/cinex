@@ -19,12 +19,12 @@ from core import views
 from django.conf import settings
 
 urlpatterns = [
-    path('', views.home, name="home" ),
-    path('contact/', views.contact, name="contact" ),
+    path('', include('core.urls')),
     path('services/', include('services.urls')),
     path('notices/', include('notices.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('registration.urls')),
 ]
 
 if settings.DEBUG:
