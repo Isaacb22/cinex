@@ -291,6 +291,19 @@ input.input100 {
   height: 55px;
 }
 
+.inputform {
+  font-family: Raleway-Medium;
+  color: #555555;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 55px;
+  padding: 0 25px 0 25px;
+}
+
 /*---------------------------------------------*/
 
 .focus-input100 {
